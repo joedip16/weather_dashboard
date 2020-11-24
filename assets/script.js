@@ -1,7 +1,7 @@
 $(document).ready(function () {
 
 
-    var searchHistory = localStorage.getItem("cities") || [];
+    var searchHistory = localStorage.getItem("cities");
     console.log(typeof searchHistory)
     console.log(searchHistory)
 
@@ -20,9 +20,9 @@ $(document).ready(function () {
     console.log(historyDiv)
 
 
-    searchHistory.forEach(function (city) {
+    searchHistory.forEach(function (searchHistory) {
         var button = document.createElement("BUTTON");
-        button.textContent = city;
+        button.textContent = searchHistory;
         console.log(button)
         historyDiv.appendChild(button);
     });
