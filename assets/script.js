@@ -1,13 +1,11 @@
 $(document).ready(function () {
-
-
-    var searchHistory = localStorage.getItem("cities");
+    var searchHistory = JSON.parse(localStorage.getItem("cities")) || [];
     console.log(typeof searchHistory)
     console.log(searchHistory)
 
 
     if (searchHistory !== null && typeof searchHistory !== "string") {
-        searchHistory.split(",")
+        // searchHistory.split(",")
         console.log(searchHistory)
     } else {
 
@@ -47,7 +45,7 @@ $(document).ready(function () {
         console.log(searchHistory)
         var searchValue = $("#search-value").val();
         searchHistory.push(searchValue)
-        localStorage.setItem("cities", searchHistory)
+        localStorage.setItem("cities", JSON.stringify(searchHistory))
 
 
         $("#search-value").val("");
