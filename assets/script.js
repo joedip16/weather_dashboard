@@ -58,7 +58,7 @@ $(document).ready(function () {
     function searchWeather(searchValue) {
         $.ajax({
             type: "GET",
-            url: "http://api.openweathermap.org/data/2.5/weather?q=" + searchValue + "&appid=891d6bcf73691e3f5340876c34a589c2&units=imperial",
+            url: "https://api.openweathermap.org/data/2.5/weather?q=" + searchValue + "&appid=891d6bcf73691e3f5340876c34a589c2&units=imperial",
             dataType: "json",
         }).then(function (data) {
             console.log(data)
@@ -93,7 +93,7 @@ $(document).ready(function () {
     function searchForcast(searchValue) {
         $.ajax({
             type: "GET",
-            url: "http://api.openweathermap.org/data/2.5/forecast?q=" + searchValue + "&appid=891d6bcf73691e3f5340876c34a589c2&units=imperial",
+            url: "https://api.openweathermap.org/data/2.5/forecast?q=" + searchValue + "&appid=891d6bcf73691e3f5340876c34a589c2&units=imperial",
             dataType: "json",
         }).then(function (data) {
             console.log(data)
